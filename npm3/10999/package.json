@@ -1,0 +1,11 @@
+{
+  "name": "10999",
+  "version": "1.0.0",
+  "description": "With npm 3, for the first time other packages can influence each other's dependencies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
