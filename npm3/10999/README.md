@@ -39,3 +39,5 @@ This will print:
 As you can see, install order actually affects the bits that will be run. The key here is that test-a has an *absolute dependency* on test-c 1.0.0, while test-b has a semver range dependency on test-c ^1.0.0. That means if test-b is installed first, it correctly picks up 1.0.1, then a will of course want 1.0.0. However, if a installs first, then 1.0.0 will be installed, which satisfies b, and thus both get 1.0.0.
 
 The important thing here is that anyone *ELSE* that has an absolute dependency (and is alphabetically before you), effectively sabotages YOUR package. The only remedy is then on the *end user* to manually fiddle with thier shrinkwrap. As a package author, you can't actually do anything, other than explain to your users the subtle effects *other packages* have on your package, then try to walk them through their each time unique shrinkwrap solution.
+
+Edit: I'd like to quickly point out that I'm not making a claim to the require-cache. I could have had it print "good" and "bad" instead of "1.0.0" and "1.0.1". I am aware that there is no guarantee of getting two 1.0.0's or just 1 depending on the tree structure.
