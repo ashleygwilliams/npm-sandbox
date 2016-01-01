@@ -1,6 +1,6 @@
 # npm3 - #10999 - Npm v3 non-determinism does actually result in different code (not just tree structure)
 
-Original bug can be found here: #10999.
+Original bug can be found here: [#10999](https://github.com/npm/npm/issues/10999).
 With npm 3, for the first time other packages can influence each other's dependencies.
 
 ## Up and Running
